@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 setAdapter(searchTerm);
                 Toast.makeText(this, "Performing search for: " + txtsearch, Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Please enter a search term", Toast.LENGTH_SHORT).show();
+               setAdapter(null);
             }
         }
         else if(v.getId()==R.id.btnlayout){
