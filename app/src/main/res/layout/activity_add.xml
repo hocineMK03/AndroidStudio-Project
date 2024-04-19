@@ -106,25 +106,48 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="16dp" />
 
+    <!-- Image Picker Button -->
+    <Button
+        android:id="@+id/btnpickimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick Image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Image Preview -->
+    <ImageView
+        android:id="@+id/imgv"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintStart_toEndOf="@+id/btnpickimg"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <!-- Add Button -->
     <Button
         android:id="@+id/btnadd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-
         android:text="Add"
-        app:layout_constraintEnd_toStartOf="@+id/btnreturn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/imgv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp" />
 
+    <!-- Go Back Button -->
     <Button
         android:id="@+id/btnreturn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-
-        android:layout_marginEnd="64dp"
         android:text="Go Back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/imgv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

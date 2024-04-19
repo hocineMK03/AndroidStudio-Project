@@ -15,7 +15,14 @@ public class Employee implements Serializable {
         // Default constructor
     }
 
-
+    public Employee(String lastName, String firstName, String phoneNumber, String email,byte[] photo) {
+        this.id = id;
+        this.photo = photo;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
 
     public Employee(int id, String lastName, String firstName, String phoneNumber, String email) {
         this.id = id;
@@ -25,7 +32,14 @@ public class Employee implements Serializable {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
-
+    public Employee(int id, String lastName, String firstName, String phoneNumber, String email,byte [] photo) {
+        this.id = id;
+        this.photo = photo;
+        this.lastName = lastName;
+        this.firstName = firstName;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
     public Employee(String lastName, String firstName, String phoneNumber, String email) {
 
         this.lastName = lastName;

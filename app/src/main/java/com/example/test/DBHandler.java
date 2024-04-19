@@ -21,7 +21,8 @@ public class DBHandler extends SQLiteOpenHelper {
                 "last_name TEXT," +
                 "first_name TEXT," +
                 "phone_number TEXT," +
-                "email TEXT" +
+                "email TEXT," +
+                "photo BLOB" +
                 ")";
         db.execSQL(CREATE_TABLE);
     }
@@ -43,6 +44,7 @@ public class DBHandler extends SQLiteOpenHelper {
         values.put("first_name",emp.getFirstName());
         values.put("phone_number",emp.getPhoneNumber());
         values.put("email",emp.getEmail());
+        values.put("photo", emp.getPhoto());
         db.insert("employee", null, values);
         db.close();
     }
@@ -63,6 +65,7 @@ public class DBHandler extends SQLiteOpenHelper {
             int firstNameIndex = cursor.getColumnIndex("first_name");
             int phoneNumberIndex = cursor.getColumnIndex("phone_number");
             int emailIndex = cursor.getColumnIndex("email");
+            int photoIndex = cursor.getColumnIndex("photo");
             for(int i=0;i<count;i++){
 
                  id = cursor.getInt(idIndex);
@@ -71,7 +74,8 @@ public class DBHandler extends SQLiteOpenHelper {
                  firstName = cursor.getString(firstNameIndex);
                  phoneNumber = cursor.getString(phoneNumberIndex);
                  email = cursor.getString(emailIndex);
-                emps[i] = new Employee(id, lastName, firstName, phoneNumber, email);
+                 photo = cursor.getBlob(photoIndex);
+                emps[i] = new Employee(id, lastName, firstName, phoneNumber, email,photo);
                 cursor.moveToNext();
             }
             if (id != -1 &&  lastName != null && firstName != null && phoneNumber != null && email != null) {

@@ -30,6 +30,7 @@ public class EmailHandler extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if(v.getId()==R.id.buttonsendemail){
             Toast.makeText(this, "Email Sent", Toast.LENGTH_SHORT).show();
+
         }
         else if(v.getId()==R.id.goback){
             Intent intent = new Intent(EmailHandler.this, MainActivity.class);

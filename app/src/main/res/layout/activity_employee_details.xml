@@ -146,32 +146,6 @@
         app:layout_constraintWidth_percent="0.4" />
 
     <Button
-        android:id="@+id/buttonSendSMS"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Send SMS"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUpdate"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/buttonSendEmail"
-        app:layout_constraintWidth_percent="0.4" />
-
-    <Button
-        android:id="@+id/buttonSendEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Send Email"
-        app:layout_constraintStart_toEndOf="@+id/buttonSendSMS"
-        app:layout_constraintTop_toBottomOf="@+id/buttonGoBack"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintWidth_percent="0.4" />
-
-    <Button
         android:id="@+id/buttondeleterow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -180,5 +154,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSendEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoBack" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:text="Send To Employee"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.431"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttondeleterow"
+        app:layout_constraintWidth_percent="0.8" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
